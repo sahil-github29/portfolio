@@ -1,0 +1,51 @@
+.work {
+  background-color: #ff98000d;
+  grid-column: center-start / center-end;
+  padding: 5rem;
+
+  h2 {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 10% min-content 10%;
+    align-items: center;
+    justify-content: center;
+    grid-column-gap: 1rem;
+    &:before,
+    &:after {
+      content: '';
+      height: 1px;
+      display: block;
+      background-color: currentColor;
+    }
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min-content, 28rem));
+    grid-gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+    img {
+      width: 100%;
+      border-radius: 0.3rem;
+      transition: transform 0.2s ease-in, filter 0.1s ease-in;
+      filter: brightness(80%);
+      box-shadow: 0px 0px 5px 0px rgba(138, 133, 138, 1);
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.1);
+        filter: brightness(100%);
+      }
+    }
+  }
+  @media only screen and (max-width: 43.75em) {
+    .projects {
+      grid-template-columns: repeat(1, minmax(min-content, max-content));
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
