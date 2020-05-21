@@ -1,106 +1,72 @@
 .home {
-  background-color: blueviolet;
-  grid-column: 1/ -1;
-  height: 80vh;
+	background-color: blueviolet;
+	grid-column: 1/ -1;
+	height: 80vh;
 
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(250, 138, 47, 0.9) 0%,
-      rgba(248, 80, 58, 0.904) 100%
-    ),
-    url('/img/bg/home.jpg');
-  background-size: cover;
-  background-position: center;
+	background-image: linear-gradient(
+			to right bottom,
+			rgba(250, 138, 47, 0.9) 0%,
+			rgba(248, 80, 58, 0.904) 100%
+		),
+		url('/img/bg/home.jpg');
+	background-size: cover;
+	background-position: center;
 
-  .text-container {
-    padding: 15rem 0 0 16rem;
-  }
-  span:not(.banner-text-4) {
-    color: white;
-    font-size: 4.5rem;
-    font-weight: bold;
-    display: block;
-    transition: all 1s ease-in;
-  }
-  .banner-text-4 {
-    display: inline-block;
-    background-color: white;
-    padding: 1rem;
-    font-size: 1.8rem;
-  }
+	.text-container {
+		padding: 15rem 0 0 16rem;
+	}
+	span:not(.banner-text-4) {
+		color: white;
+		font-size: 4.5rem;
+		font-weight: bold;
+		display: block;
+		transition: all 1s ease-in;
+	}
+	.banner-text-4 {
+		display: inline-block;
+		background-color: white;
+		padding: 1rem;
+		font-size: 1.8rem;
+	}
 
-  .banner-text-1 {
-    animation: moveInRight 1.2s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-  .banner-text-2 {
-    animation: moveInLeft 1.2s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-  .banner-text-3 {
-    animation: moveInRight 1.2s ease-in-out;
-  }
-  .banner-text-4 {
-    animation: moveInTop 1s cubic-bezier(0, 0.55, 0.45, 1);
-  }
-  /* Animation */
-  @keyframes moveInRight {
-    0% {
-      opacity: 0;
-      transform: translateX(-100px);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-  @keyframes moveInLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(10rem);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-  @keyframes moveInTop {
-    0% {
-      opacity: 0;
-      transform: translateY(10rem);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-  @media only screen and (max-width: 122.5em) {
-    height: 60vh;
-    .text-container {
-      padding: 18rem 0 0 15rem;
-    }
-  }
-  @media only screen and (max-width: 75em) {
-    height: 50vh;
-    .banner-text-4 {
-      transform: translate(0px);
-      font-size: 1.5rem;
-    }
-  }
-  @media only screen and (max-width: 54.16em) {
-    height: 40vh;
-
-    .banner-text-4 {
-      transform: translate(0px);
-    }
-  }
-
-  @media only screen and (max-width: 24em) {
-    .text-container {
-      padding: 10rem 0 0 4rem;
-      .banner-text-1,
-      .banner-text-2,
-      .banner-text-3 {
-        font-size: 3rem;
-      }
-      .banner-text-4 {
-        font-size: 1rem;
-      }
-    }
-  }
+	.banner-text-1 {
+		animation: moveInRight 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+	.banner-text-2 {
+		animation: moveInLeft 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+	.banner-text-3 {
+		animation: moveInRight 1.2s ease-in-out;
+	}
+	.banner-text-4 {
+		animation: moveInTop 1s cubic-bezier(0, 0.55, 0.45, 1);
+	}
+	/* Animation */
+	@keyframes moveInRight {
+		0% {
+			opacity: 0;
+			transform: translateX(-100px);
+		}
+		100% {
+			transform: translateX(0);
+		}
+	}
+	@keyframes moveInLeft {
+		0% {
+			opacity: 0;
+			transform: translateX(10rem);
+		}
+		100% {
+			transform: translateX(0);
+		}
+	}
+	@keyframes moveInTop {
+		0% {
+			opacity: 0;
+			transform: translateY(10rem);
+		}
+		100% {
+			transform: translateY(0);
+		}
+	}
 }
