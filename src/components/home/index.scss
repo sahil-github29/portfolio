@@ -1,72 +1,137 @@
 .home {
-	background-color: blueviolet;
-	grid-column: 1/ -1;
-	height: 80vh;
+  background-color: blueviolet;
+  grid-column: 1/ -1;
+  height: 60vh;
 
-	background-image: linear-gradient(
-			to right bottom,
-			rgba(250, 138, 47, 0.9) 0%,
-			rgba(248, 80, 58, 0.904) 100%
-		),
-		url('/img/bg/home.jpg');
-	background-size: cover;
-	background-position: center;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(250, 138, 47, 0.9) 0%,
+      rgba(248, 80, 58, 0.904) 100%
+    ),
+    url("/img/bg/home.jpg");
+  background-size: cover;
+  background-position: center;
 
-	.text-container {
-		padding: 15rem 0 0 16rem;
-	}
-	span:not(.banner-text-4) {
-		color: white;
-		font-size: 4.5rem;
-		font-weight: bold;
-		display: block;
-		transition: all 1s ease-in;
-	}
-	.banner-text-4 {
-		display: inline-block;
-		background-color: white;
-		padding: 1rem;
-		font-size: 1.8rem;
-	}
+  .text-container {
+    padding: 15rem 0 0 16rem;
+    margin-right: 2rem;
+  }
+  span:not(.banner-text-4) {
+    color: white;
+    font-size: 4.5rem;
+    font-weight: bold;
+    display: block;
+    transition: all 1s ease-in;
+  }
+  .banner-text-4 {
+    display: inline-block;
+    background-color: white;
+    padding: 1rem;
+    font-size: 1.8rem;
+  }
 
-	.banner-text-1 {
-		animation: moveInRight 1.2s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-	.banner-text-2 {
-		animation: moveInLeft 1.2s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-	.banner-text-3 {
-		animation: moveInRight 1.2s ease-in-out;
-	}
-	.banner-text-4 {
-		animation: moveInTop 1s cubic-bezier(0, 0.55, 0.45, 1);
-	}
-	/* Animation */
-	@keyframes moveInRight {
-		0% {
-			opacity: 0;
-			transform: translateX(-100px);
-		}
-		100% {
-			transform: translateX(0);
-		}
-	}
-	@keyframes moveInLeft {
-		0% {
-			opacity: 0;
-			transform: translateX(10rem);
-		}
-		100% {
-			transform: translateX(0);
-		}
-	}
-	@keyframes moveInTop {
-		0% {
-			opacity: 0;
-			transform: translateY(10rem);
-		}
-		100% {
-			transform: translateY(0);
-		}
-	}
+  .banner-text-1 {
+    animation: moveInRight 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .banner-text-2 {
+    animation: moveInLeft 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .banner-text-3 {
+    animation: moveInRight 1.2s ease-in-out;
+  }
+  .banner-text-4 {
+    animation: moveInTop 1s cubic-bezier(0, 0.55, 0.45, 1);
+  }
+  /* Animation */
+  @keyframes moveInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes moveInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(10rem);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes moveInTop {
+    0% {
+      opacity: 0;
+      transform: translateY(10rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  // width 900 => 900/16 = 56.25
+  @media screen and (max-width: 56.25em) {
+    height: 40vh;
+    .text-container {
+      padding: 14rem 0 0 12rem;
+
+      .banner-text-1,
+      .banner-text-2,
+      .banner-text-3 {
+        font-size: 3.5rem;
+      }
+      .banner-text-4 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  // width 700 => 700/16 = 43.75
+  @media screen and (max-width: 43.75em) {
+    height: 40vh;
+    .text-container {
+      padding: 15rem 0 0 5rem;
+
+      .banner-text-1,
+      .banner-text-2,
+      .banner-text-3 {
+        font-size: 3.5rem;
+      }
+      .banner-text-4 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  // width 600 => 600/16 = 37.5
+  @media screen and (max-width: 37.5em) {
+    height: 35vh;
+    .text-container {
+      padding: 15rem 0 0 5rem;
+      .banner-text-1,
+      .banner-text-2,
+      .banner-text-3 {
+        font-size: 2.2rem;
+      }
+      .banner-text-4 {
+        font-size: 1rem;
+      }
+    }
+  }
+  // width 500 => 500/16 = 31.25
+  @media screen and (max-width: 31.25em) {
+    .text-container {
+      .banner-text-1,
+      .banner-text-2,
+      .banner-text-3 {
+        font-size: 2.2rem;
+      }
+      .banner-text-4 {
+        font-size: 1rem;
+      }
+
+      padding: 12rem 0 0 4rem;
+    }
+  }
 }

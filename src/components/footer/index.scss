@@ -1,26 +1,29 @@
 .footer {
-	background-color: black;
-	grid-column: 1 / -1;
-	grid-template-rows: min-content;
-	display: grid;
-	justify-content: center;
-	align-items: center;
-	color: var(--border-color-light-grey);
-	font-size: 1.3rem;
-	padding: 2rem 0;
+  background-color: black;
+  grid-column: 1 / -1;
+  grid-template-rows: min-content;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: var(--border-color-light-grey);
+  font-size: 1.3rem;
+  padding: 2rem 0;
 
-	.link-container {
-		display: flex;
-		padding-top: 1rem;
+  .link-container {
+    display: flex;
+    padding-top: 1rem;
 
-		span {
-			margin-right: 0.5rem;
+    span {
+      margin-right: 0.5rem;
 
-			& > svg {
-				width: 2rem;
-				height: 2rem;
-				fill: orange;
-			}
-		}
-	}
+      & > svg {
+        width: 2rem;
+        height: 2rem;
+        fill: orange;
+      }
+    }
+  }
+  @media screen and (max-width: 31.25em) {
+    padding: 2rem;
+  }
 }

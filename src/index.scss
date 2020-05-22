@@ -20,44 +20,44 @@
     url('./fonts/OpenSans-SemiBold.ttf') format('ttf');
 } */
 #container {
-	display: grid;
-	/* height of the each row */
-	grid-template-rows: min-content min-content repeat(2, min-content) min-content;
-	grid-template-columns:
-		[spaceleft-start] minmax(6rem, 1fr)
-		[spaceleft-end center-start]
-		repeat(8, [col-start] minmax(min-content, 16rem) [col-end])
-		[center-end spaceright-start]
-		minmax(6rem, 1fr)
-		[spaceright-end];
+  display: grid;
+  /* height of the each row */
+  grid-template-rows: min-content min-content repeat(2, min-content) min-content;
+  grid-template-columns:
+    [spaceleft-start] minmax(6rem, 1fr)
+    [spaceleft-end center-start]
+    repeat(8, [col-start] minmax(min-content, 16rem) [col-end])
+    [center-end spaceright-start]
+    minmax(6rem, 1fr)
+    [spaceright-end];
 
-	@media only screen and (max-width: 24em) {
-		grid-template-rows: min-content min-content repeat(2, min-content) min-content;
-		grid-template-columns:
-			[spaceleft-start] 1rem
-			[spaceleft-end center-start]
-			repeat(5, [col-start] minmax(min-content, 14rem) [col-end])
-			[center-end spaceright-start]
-			1rem
-			[spaceright-end];
-	}
+  @media only screen and (max-width: 24em) {
+    grid-template-rows: min-content min-content repeat(2, min-content) min-content;
+    grid-template-columns:
+      [spaceleft-start] 1rem
+      [spaceleft-end center-start]
+      repeat(5, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end spaceright-start]
+      1rem
+      [spaceright-end];
+  }
 }
 .home,
 .skills,
 .work,
 .about {
-	margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 .contact {
-	margin: 6rem 0 10rem 0;
+  margin: 6rem 0 10rem 0;
 }
 
 .shadow {
-	box-shadow: 0px 0px 5px 0px rgba(138, 133, 138, 1);
+  box-shadow: 0px 0px 5px 0px rgba(138, 133, 138, 1);
 }
 
 @mixin shadow {
-	box-shadow: 0px 0px 5px 0px rgba(138, 133, 138, 1);
+  box-shadow: 0px 0px 5px 0px rgba(138, 133, 138, 1);
 }
 
 /* COLOR VARIABLES */
@@ -72,30 +72,30 @@ $color-grey-dark-1: #766d66;
 $color-grey-dark-2: #696059;
 
 :root {
-	--color-primary: #ffa45c;
-	--color-secondary: #302822;
-	--color-secondary-rbg: 48, 40, 34;
+  --color-primary: #ffa45c;
+  --color-secondary: #302822;
+  --color-secondary-rbg: 48, 40, 34;
 
-	--color-bg-linen: #f8e5d5;
-	--color-moodyblue: #7a7ad6;
+  --color-bg-linen: #f8e5d5;
+  --color-moodyblue: #7a7ad6;
 
-	// Border Color
-	--border-color-light-grey: #cfcece;
+  // Border Color
+  --border-color-light-grey: #cfcece;
 
-	// DEFAULT FONT
-	--font-primary: 'Montserrat', sans-serif;
+  // DEFAULT FONT
+  --font-primary: "Montserrat", sans-serif;
 
-	--font-heading: 'Montserrat', sans-serif;
+  --font-heading: "Montserrat", sans-serif;
 }
 
 *,
 *::before,
 *::after {
-	margin: 0;
-	padding: 0;
-	box-sizing: inherit;
-	font-family: inherit;
-	font-size: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 // this below code should go to mixins scss file -- start
@@ -123,7 +123,7 @@ $color-grey-dark-2: #696059;
 */
 
 @mixin respond($breakpoints) {
-	/* // 600px / 16 = 37em
+  /* // 600px / 16 = 37em
 	@if $breakpoints == phone {
 		@media (max-width: 37.5em) {
 			@content;
@@ -157,16 +157,21 @@ $color-grey-dark-2: #696059;
 // above code should go to mixins scss file  -- end
 
 html {
-	box-sizing: border-box;
-	font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
-	scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+  scroll-behavior: smooth;
 
-	// width 900 => 900/16 = 56.25
-	@media screen and (max-width: 56.25em) {
-		font-size: 56.25%;
-	}
+  // width 900 => 900/16 = 56.25
+  @media screen and (max-width: 56.25em) {
+    font-size: 56.25%;
+  }
 
-	/* @include respond(tab-land) {
+  // width 800 => 800/16 = 50
+  @media screen and (max-width: 56.25em) {
+    font-size: 50%;
+  }
+
+  /* @include respond(tab-land) {
 		font-size: 56.25%; // 1 rem = 9px, 9/16 = 56.25%
 	}
 	
@@ -182,29 +187,29 @@ html {
 }
 
 body {
-	font-family: var(--font-primary);
-	color: $color-grey-dark-2;
-	font-size: 1.5rem;
-	font-weight: 300;
-	line-height: 1.6;
+  font-family: var(--font-primary);
+  color: $color-grey-dark-2;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.6;
 }
 
 a,
 a:link {
-	color: currentColor;
-	text-decoration: none;
+  color: currentColor;
+  text-decoration: none;
 }
 
 // ATOMIC CLASSES
 .mb-sm {
-	margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 .mb-md {
-	margin-bottom: 4rem;
+  margin-bottom: 4rem;
 }
 .mb-lg {
-	margin-bottom: 6rem;
+  margin-bottom: 6rem;
 }
 .mb-xl {
-	margin-bottom: 8rem;
+  margin-bottom: 8rem;
 }
