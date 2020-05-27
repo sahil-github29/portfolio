@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "./index.scss";
 import { PageHeading, Paragraph } from "../styled-components";
 export default () => (
-  <section className="about" id="about">
+  <section className='about' id='about'>
     <div>
       <PageHeading>About Me</PageHeading>
       <Paragraph>
@@ -21,9 +23,11 @@ export default () => (
         This portfolio website looks simple, but it has all the modern tech
         <br />
         <br />
-        <strong>About this website &#62;</strong>
+        <strong>
+          <Link to='/about-website'>About this website &#62;</Link>
+        </strong>
       </Paragraph>
     </div>
-    <div className="aboutme-img" />
+    <div className='aboutme-img' />
   </section>
 );
