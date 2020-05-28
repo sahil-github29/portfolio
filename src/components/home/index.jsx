@@ -1,8 +1,8 @@
-import React from 'react';
-import './index.scss';
+import React from "react";
+import "./index.scss";
 
 export default React.forwardRef((props, ref) => (
-  <section className='home mb-md' ref={ref} id='home'>
+  <section className='home mb-lg' ref={ref} id='home'>
     <div className='text-container'>
       <span className='banner-text-1'>Hi,</span>
       <span className='banner-text-2'>I&apos;m Sahil,</span>

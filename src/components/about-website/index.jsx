@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import "./index.scss";
-import { PageHeading, Paragraph } from "../styled-components";
+import './index.scss';
+import { PageHeading, Paragraph } from '../styled-components';
 export default () => (
-  <section className='about-website' id='about'>
+  <section className='about-website' id='tech'>
     <div>
       <PageHeading>About the web stack</PageHeading>
       <Paragraph>
-        This website is built on React JS and are{" "}
+        This website is built on React JS and are{' '}
         <strong>equiupped with the in demand features.</strong>
       </Paragraph>
 
@@ -36,16 +36,16 @@ export default () => (
           <li> Responsive Images</li>
           <li> Using SVG sprite to reduce network request.</li>
           <li>
-            {" "}
+            {' '}
             Stirctly no use of <strong>!important</strong>
           </li>
           <li> Not using any CSS framework because of extra load</li>
           <li>
-            This project is build on pure CSS3 features and is{" "}
+            This project is build on pure CSS3 features and is{' '}
             <strong>fully responsive</strong>
           </li>
         </ul>
-        <img src='img/about-website/css-grid.png' alt='styled components' />
+        <img src='/img/about-website/css-grid.png' alt='styled components' />
       </div>
       <div className='tech-stack'>
         <h2 className='list-heading'>React JS</h2>
@@ -54,25 +54,28 @@ export default () => (
           <li>Suspense & Lazy Lodaing</li>
           <li>Code Splitting</li>
           <li>Well organized functional components and proper use of state</li>
+          <li>Higher Order Function</li>
           <li>
             Intersection Observer API using Hooks for changing navbar on
             scrolling
           </li>
           <li>CSS styled components</li>
           <li>Webpack</li>
+          <li>Server Side Rendering for SEO</li>
         </ul>
         <img
-          src='img/about-website/airbnb-style-eslint.png'
+          src='/img/about-website/airbnb-style-eslint.png'
           alt='airbnb style'
         />
         <img
-          src='img/about-website/eslint-fixed-error.png'
+          src='/img/about-website/eslint-fixed-error.png'
           alt='airbnb style'
         />
         <img
-          src='img/about-website/styled-components.png'
+          src='/img/about-website/styled-components.png'
           alt='styled components'
         />
+        <img src='/img/about-website/server-side.png' alt='styled components' />
       </div>
     </div>
     <div className='aboutme-img' />

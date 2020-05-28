@@ -1,7 +1,7 @@
 .home {
   background-color: blueviolet;
   grid-column: 1/ -1;
-  height: 60vh;
+  height: 70vh;
 
   background-image: linear-gradient(
       to right bottom,
@@ -94,7 +94,7 @@
 
   // width 900 => 900/16 = 56.25
   @media screen and (max-width: 56.25em) {
-    height: 40vh;
+    height: 50vh;
     .text-container {
       padding: 14rem 0 0 12rem;
 
@@ -111,7 +111,7 @@
 
   // width 700 => 700/16 = 43.75
   @media screen and (max-width: 43.75em) {
-    height: 40vh;
+    height: 50vh;
     .text-container {
       padding: 15rem 0 0 5rem;
 
@@ -127,7 +127,7 @@
   }
   // width 600 => 600/16 = 37.5
   @media screen and (max-width: 37.5em) {
-    height: 35vh;
+    height: 45vh;
     .text-container {
       padding: 15rem 0 0 5rem;
       .banner-text-1,

@@ -1,43 +1,13 @@
-import React, { Suspense, lazy } from "react";
-import ReactDOM from "react-dom";
-import { useInView } from "react-intersection-observer";
-import { BrowserRouter } from "react-router-dom";
-import { Route } from "react-router-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
 
-import "./index.scss";
-import Home from "./components/home";
-import Navbar from "./components/navbar";
-import Skills from "./components/skills";
-import Work from "./components/work";
-import About from "./components/about";
-import Contact from "./components/contact";
-import Footer from "./components/footer";
+import './index.scss';
 
-const AboutWebsite = lazy(() => import("./components/about-website"));
-
-const App = () => {
-  const [ref, inView] = useInView({
-    threshold: 0,
-  });
-  return (
-    <div id='container'>
-      <Suspense fallback='Loading...!'>
-        <Navbar inView={inView} />
-        <Home ref={ref} />
-        <Skills />
-        <Work />
-        <About />
-        <Route path='/about-website' component={AboutWebsite} />
-        <Contact />
-        <Footer />
-      </Suspense>
-    </div>
-  );
-};
-
-ReactDOM.render(
-  <BrowserRouter>
+ReactDOM.hydrate(
+  <BrowserRouter suppressHydrationWarning={true}>
     <App />
   </BrowserRouter>,
-  document.getElementById("root")
+  document.getElementById('root')
 );

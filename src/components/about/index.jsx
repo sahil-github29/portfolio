@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
 
-import "./index.scss";
-import { PageHeading, Paragraph } from "../styled-components";
+import './index.scss';
+import { PageHeading, Paragraph } from '../styled-components';
 export default () => (
   <section className='about' id='about'>
     <div>
@@ -24,7 +24,7 @@ export default () => (
         <br />
         <br />
         <strong>
-          <Link to='/about-website'>About this website &#62;</Link>
+          <Link to='website/#tech'>About this website &#62;</Link>
         </strong>
       </Paragraph>
     </div>

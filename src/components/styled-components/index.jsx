@@ -57,3 +57,28 @@ export const TextArea = styled.textarea`
   margin-bottom: 0.5rem;
   padding: 0.5rem;
 `;
+
+export const SpinnerOverlay = styled.div`
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  align-items: center;
+  background-color: rgba(15, 15, 15, 0.1);
+`;
+
+export const SpinnerIcon = styled.div`
+  height: 5rem;
+  width: 5rem;
+  border: 3px solid rgba(192, 195, 195, 0.6);
+  border-radius: 50%;
+  border-top-color: #636767;
+  animation: spin 1s ease-in-out infinite;
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+`;
