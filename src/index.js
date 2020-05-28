@@ -6,8 +6,8 @@ import App from './App';
 import './index.scss';
 
 ReactDOM.hydrate(
-  <BrowserRouter suppressHydrationWarning={true}>
-    <App />
+  <BrowserRouter>
+    <App suppressHydrationWarning={true} />
   </BrowserRouter>,
   document.getElementById('root')
 );

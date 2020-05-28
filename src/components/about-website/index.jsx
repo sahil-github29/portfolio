@@ -76,6 +76,7 @@ export default () => (
           alt='styled components'
         />
         <img src='/img/about-website/server-side.png' alt='styled components' />
+        <img src='/img/about-website/wireframes.jpeg' alt='styled components' />
       </div>
     </div>
     <div className='aboutme-img' />
